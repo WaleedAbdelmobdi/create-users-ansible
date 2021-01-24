@@ -15,11 +15,11 @@
 - Clone the Project:
 
 ```
-$ git clone https://github.com/jmutai/tomcat-ansible.git
-$ cd tomcat-ansible
+$ git https://github.com/WaleedAbdelmobdi/create-users-ansible.git
+$ cd create-users-ansible
 ```
 
-- Update your inventory, e.g:
+- Update your inventory:
 
 ```
 $ vim hosts
@@ -31,6 +31,7 @@ $ vim hosts
 
 ```
 $ vim vars.yaml
+---
 
 
 ## Running Playbook
@@ -39,12 +40,12 @@ $ vim vars.yaml
 Playbook executed as root user - with password:
 
 ```
-$ ansible-playbook -i hosts tomcat-setup.yml --ask-pass
+$ ansible-playbook -i hosts create-users.yaml  --ask-pass
 ```
 
 Playbook executed as sudo user - with password:
 
 ```
-$ ansible-playbook -i hosts tomcat-setup.yml --ask-pass --ask-become-pass
-
+$ ansible-playbook -i hosts create-users.yaml --ask-pass --ask-become-pass
+---
 

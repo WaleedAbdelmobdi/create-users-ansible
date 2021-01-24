@@ -1,9 +1,5 @@
 ---
  - hosts: web1
-  # vars:
-  #  users:
-  #   - ledo2
-  #  - zezo2
    gather_facts: no
    become: true
    tasks:
