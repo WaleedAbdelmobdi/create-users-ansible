@@ -24,13 +24,31 @@ $ cd create-users-ansible
 ```
 $ vim hosts
 [nodes]
-192.168.10.10       # Remote user to act on
+192.168.10.10       # Update IP for Remote user to act on
 ```
 
 - Update users name 
 
 ```
 $ vim vars.yaml
+   users:
+  - ledo # set username to be create
+  - zezo # set username to be create
+                                 
+```
+
+- Update variables in playbook file - Set remote user
+   gather_facts: no
+   become: yes               # If to escalate privilege
+   become_method: sudo       # Set become method
+   remote_user: root       # Update username for remote server
+```
+
+If you are using non root remote user, then set username and enable sudo
+
+```
+become: yes
+become_method: sudo
 ```
 
 
