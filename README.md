@@ -7,8 +7,6 @@
 
 - CentOS 8
 
-## Tasks in the role
-
 
 ## Usage
 
