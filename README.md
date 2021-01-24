@@ -27,7 +27,7 @@ $ vim hosts
 192.168.10.10       # Update IP for Remote user to act on
 ```
 
-- Update users name 
+- Update users name to be created
 
 ```
 $ vim vars.yaml
@@ -38,6 +38,8 @@ $ vim vars.yaml
 ```
 
 - Update variables in playbook file - Set remote user
+
+```
    gather_facts: no
    become: yes               # If to escalate privilege
    become_method: sudo       # Set become method
@@ -49,6 +51,7 @@ If you are using non root remote user, then set username and enable sudo
 ```
 become: yes
 become_method: sudo
+
 ```
 
 
