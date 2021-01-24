@@ -1,0 +1,8 @@
+web1 ansible_ssh_host=95.216.166.180 
+
+[webservers]
+web1
+[webservers:vars]
+ansible_ssh_user=root 
+ansible_ssh_pass=Nouran@2015 
+ansible_python_interpreter=/usr/bin/python3

@@ -1,0 +1,25 @@
+---
+ - hosts: web1
+  # vars:
+  #  users:
+  #   - ledo2
+  #  - zezo2
+   gather_facts: no
+   become: true
+   tasks:
+   - include_vars: vars.yaml
+   - name: Add a new users
+     user:
+              name: "{{ item }}"
+              shell: /bin/bash
+              password: "{{ lookup('password', '/tmp/passwordfile chars=digits') }}"
+
+              createhome: yes 
+     with_items:
+       - "{{ users }}"
+   - name: Add  user to the sudoers
+     copy:
+              dest: "/etc/sudoers.d/{{ item }}"
+              content: "{{ item }}  ALL=(ALL)  NOPASSWD: ALL"
+     with_items:
+       - "{{ users }}"
