@@ -23,7 +23,7 @@ $ cd create-users-ansible
 
 ```
 $ vim hosts
-[nodes]
+[node1]
 192.168.10.10       # Update IP for Remote user to act on
 ```
 
