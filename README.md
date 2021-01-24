@@ -31,7 +31,7 @@ $ vim hosts
 
 ```
 $ vim vars.yaml
----
+```
 
 
 ## Running Playbook
@@ -47,5 +47,5 @@ Playbook executed as sudo user - with password:
 
 ```
 $ ansible-playbook -i hosts create-users.yaml --ask-pass --ask-become-pass
----
+```
 
