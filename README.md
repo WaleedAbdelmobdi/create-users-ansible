@@ -15,7 +15,7 @@
 - Clone the Project:
 
 ```
-$ git https://github.com/WaleedAbdelmobdi/create-users-ansible.git
+$ git clone https://github.com/WaleedAbdelmobdi/create-users-ansible.git
 $ cd create-users-ansible
 ```
 
