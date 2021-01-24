@@ -40,6 +40,7 @@ $ vim vars.yaml
 - Update variables in playbook file - Set remote user
 
 ```
+$ vim create-users.yaml
    gather_facts: no
    become: yes               # If to escalate privilege
    become_method: sudo       # Set become method
