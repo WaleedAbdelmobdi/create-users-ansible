@@ -3,15 +3,15 @@
    gather_facts: no
    become: yes               # If to escalate privilege
    become_method: sudo       # Set become method
-   remote_user: zezo1        # Update username for remote server
+   remote_user: root       # Update username for remote server
    tasks:
    - include_vars: vars.yaml
    - name: Add a new users
      user:
               name: "{{ item }}"
               shell: /bin/bash
-              password: "{{ lookup('password', '/tmp/passwordfile chars=digits') }}"
-
+              update_password: on_create
+              password: "{{ lookup('password', '/tmp/password chars=digits') }}"
               createhome: yes 
      with_items:
        - "{{ users }}"
